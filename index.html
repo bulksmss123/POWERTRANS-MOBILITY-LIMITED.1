@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Powertrans Mobility Limited | EV · Battery · Automobile</title>
+    <!-- Google Fonts & simple CSS reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        .top-bar {
+            background: linear-gradient(135deg, #0b2b26 0%, #0a3b2f 100%);
+            color: #e2f0ec;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-info i {
+            margin-right: 6px;
+            color: #6ee7b7;
+        }
+        .contact-info span {
+            margin-right: 18px;
+            font-size: 0.85rem;
+        }
+        .main-header {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.65rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(125deg, #0f3b30, #1b6b4c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .logo span {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #4b5563;
+            display: block;
+            letter-spacing: 0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e293b;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #1e7a5c;
+        }
+        /* buttons & hero */
+        .btn-outline {
+            border: 1.5px solid #1e7a5c;
+            background: transparent;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #1e7a5c;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: #1e7a5c;
+            color: white;
+        }
+        .btn-solid {
+            background: #1e7a5c;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-solid:hover {
+            background: #0e5e46;
+            transform: translateY(-2px);
+        }
+        .hero {
+            background: linear-gradient(109deg, #eef5f2 0%, #ffffff 100%);
+            padding: 60px 0 70px;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero-text {
+            flex: 1.2;
+        }
+        .hero-text h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-highlight {
+            color: #1e7a5c;
+            border-left: 4px solid #1e7a5c;
+            padding-left: 16px;
+            margin: 20px 0;
+        }
+        .hero-img {
+            flex: 0.9;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15);
+        }
+        .hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.3s;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: #1e7a5c;
+            border-radius: 4px;
+        }
+        .grid-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin: 40px 0;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 24px;
+            flex: 1 1 280px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .card i {
+            font-size: 2.5rem;
+            color: #1e7a5c;
+            margin-bottom: 18px;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .about-flex {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .about-img {
+            flex: 1;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .about-text {
+            flex: 1;
+        }
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 48px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 32px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 160px;
+        }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+        .footer-col p, .footer-col a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            padding-top: 24px;
+            font-size: 0.85rem;
+        }
+        .page-section {
+            padding: 50px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 32px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 8px 0 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 28px;
+            font-family: inherit;
+        }
+        .policy-box {
+            background: #f1f5f9;
+            padding: 28px;
+            border-radius: 28px;
+            margin: 20px 0;
+        }
+        @media (max-width: 780px) {
+            .hero-text h2 { font-size: 2.2rem; }
+            .nav-wrapper { flex-direction: column; gap: 16px; }
+            .nav-links { justify-content: center; }
+        }
+        .badge-private {
+            font-size: 0.75rem;
+            background: #1e293b;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <i class="fas fa-phone-alt"></i> <span>+91 8056040226</span>
+            <i class="fas fa-envelope"></i> <span>powertransmobility@gmail.com</span>
+        </div>
+        <div>
+            <i class="fas fa-building"></i> <span>ISO 9001:2024 | Pvt. Ltd.</span>
+        </div>
+    </div>
+</div>
+<div class="main-header">
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <h1>POWERTRANS MOBILITY LIMITED <span class="badge-private">PRIVATE LIMITED</span></h1>
+            <span>EVolution in motion · Batteries · Automobile</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+        </div>
+        <div>
+            <a href="#contact" class="btn-outline">Get Quote</a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero / Home Section -->
+<section id="home" class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <h2>Powering Tomorrow's <span style="color:#1e7a5c;">Mobility</span><br>with EV & Battery Excellence</h2>
+            <div class="hero-highlight">
+                <i class="fas fa-charging-station"></i>  Innovative E-Vehicle solutions · Advanced battery systems · Sustainable automobile ecosystem
+            </div>
+            <p>Powertrans Mobility Limited (Private) is at the forefront of electric mobility transformation in India, delivering high-performance batteries, EV components, and smart automobile technologies.</p>
+            <div style="margin-top: 32px;">
+                <a href="#contact" class="btn-solid"><i class="fas fa-headset"></i> Partner with us</a>
+                <span style="margin-left: 20px;"><i class="fas fa-map-marker-alt"></i> Ramapuram, Chennai</span>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="https://placehold.co/600x400/1e7a5c/white?text=EV+Innovation+%26+Battery+Tech" alt="Electric vehicle battery and automobile industry">
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="page-section">
+    <div class="container">
+        <h2 class="section-title">About Powertrans Mobility Ltd.</h2>
+        <div class="about-flex">
+            <div class="about-img">
+                <img src="https://placehold.co/600x400/0f3b30/white?text=EV+Manufacturing+Hub" alt="EV manufacturing and battery assembly">
+            </div>
+            <div class="about-text">
+                <h3>Engineering the Electric Future</h3>
+                <p>Established as a premier PRIVATE LIMITED enterprise, <strong>POWERTRANS MOBILITY LIMITED</strong> is dedicated to revolutionizing the e-vehicle, battery technology, and automobile industries. Headquartered in Chennai’s industrial corridor, we develop next-gen lithium-ion batteries, EV drivetrains, and smart mobility systems.</p>
+                <p><i class="fas fa-check-circle" style="color:#1e7a5c;"></i> R&D driven innovation · <i class="fas fa-check-circle" style="color:#1e7a5c;"></i> High-energy density cells · <i class="fas fa-check-circle" style="color:#1e7a5c;"></i> Sustainable manufacturing practices</p>
+                <p><strong>Address:</strong> NO. 3/88 MOUNT POONAMALLEE ROAD, Ramapuram, Chennai, Tamil Nadu - 600089</p>
+                <p><strong>Contact:</strong> 8056040226 | powertransmobility@gmail.com</p>
+            </div>
+        </div>
+        <div class="grid-cards">
+            <div class="card"><i class="fas fa-car-battery"></i><h3>EV Batteries</h3><p>High-performance lithium packs with thermal management & BMS.</p></div>
+            <div class="card"><i class="fas fa-charging-station"></i><h3>Charging Infra</h3><p>AC/DC fast chargers, fleet solutions & energy storage.</p></div>
+            <div class="card"><i class="fas fa-microchip"></i><h3>Auto Components</h3><p>Motors, controllers, and advanced automotive electronics.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact" class="page-section" style="background:#f9fefb;">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+            <div style="flex:1">
+                <div class="contact-form">
+                    <h3><i class="fas fa-paper-plane"></i> Send inquiry</h3>
+                    <form id="demoContact">
+                        <input type="text" placeholder="Full name" required>
+                        <input type="email" placeholder="Email address" required>
+                        <input type="tel" placeholder="Phone number">
+                        <textarea rows="3" placeholder="Tell us about your EV/battery requirement"></textarea>
+                        <button type="submit" class="btn-solid" style="border:none; width:100%">Send Message</button>
+                        <p style="font-size:0.75rem; margin-top:12px;">We'll respond within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+            <div style="flex:0.8">
+                <div style="background:white; border-radius:28px; padding:24px; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+                    <h3><i class="fas fa-map-pin"></i> Corporate Office</h3>
+                    <p><strong>POWERTRANS MOBILITY LIMITED</strong><br>
+                    NO. 3/88 MOUNT POONAMALLEE ROAD,<br>
+                    Ramapuram, Chennai - 600089<br>
+                    Tamil Nadu, India.</p>
+                    <hr style="margin: 16px 0;">
+                    <p><i class="fas fa-phone-alt"></i> +91 8056040226 <br>
+                    <i class="fas fa-envelope"></i> powertransmobility@gmail.com <br>
+                    <i class="fas fa-clock"></i> Mon-Sat: 9:30 AM – 6:30 PM</p>
+                    <div class="hero-img" style="margin-top:18px; border-radius:24px;">
+                        <img src="https://placehold.co/400x200/2d3e3a/white?text=Chennai+Facility+EV+Hub" alt="Office map location">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Privacy Policy Section -->
+<section id="privacy" class="page-section">
+    <div class="container">
+        <h2 class="section-title">Privacy Policy</h2>
+        <div class="policy-box">
+            <p><strong>Last updated:</strong> April 2026</p>
+            <p>Powertrans Mobility Limited (Private Limited) respects your privacy. This Privacy Policy describes how we collect, use, and safeguard your personal information when you visit our website or engage with our EV & automobile services.</p>
+            <h3>1. Information Collection</h3>
+            <p>We collect personal details such as name, email, phone number, and address when you fill forms, request quotes, or communicate with us. We also gather non-personal data like IP addresses and browser types for analytics.</p>
+            <h3>2. Use of Information</h3>
+            <p>Your data helps us respond to inquiries, process orders for battery/EV components, improve our services, and send relevant updates. We never sell or rent your personal data to third parties.</p>
+            <h3>3. Data Security</h3>
+            <p>We implement industry-standard encryption and access controls to protect your information. However, no internet transmission is 100% secure.</p>
+            <h3>4. Cookies</h3>
+            <p>Our website uses cookies to enhance user experience. You may disable cookies via browser settings.</p>
+            <h3>5. Legal Compliance</h3>
+            <p>We may disclose information if required by Indian law or to protect our rights. For any privacy concerns, contact us at powertransmobility@gmail.com.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Terms and Conditions -->
+<section id="terms" class="page-section">
+    <div class="container">
+        <h2 class="section-title">Terms & Conditions</h2>
+        <div class="policy-box">
+            <p><strong>Agreement between user and POWERTRANS MOBILITY LIMITED</strong></p>
+            <p>By accessing this website, you agree to be bound by these Terms & Conditions, all applicable laws, and regulations. If you do not agree with any part, please discontinue use.</p>
+            <h3>Use License</h3>
+            <p>Permission is granted to temporarily view the materials (info, software, or services) for personal, non-commercial transitory use only. You may not modify or copy the materials, use them for commercial purposes, or attempt to reverse engineer any software.</p>
+            <h3>Product & Service Terms</h3>
+            <p>All EV batteries, chargers, and auto components are subject to availability. Prices and specifications are subject to change without notice. We reserve the right to limit quantities and refuse service.</p>
+            <h3>Disclaimer</h3>
+            <p>The materials on our site are provided "as is". Powertrans Mobility Limited makes no warranties, expressed or implied, and hereby disclaims all warranties including implied warranties of merchantability, fitness for a particular purpose.</p>
+            <h3>Limitation of Liability</h3>
+            <p>In no event shall Powertrans Mobility Limited be liable for any damages (including, without limitation, loss of data or profit) arising out of the use or inability to use materials on our website.</p>
+            <h3>Governing Law</h3>
+            <p>Any claim relating to this website shall be governed by the laws of India, and jurisdiction lies in Chennai, Tamil Nadu.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer & Copyright, with extra about/contact details -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h4>POWERTRANS MOBILITY LTD.</h4>
+            <p>Leading EV, Battery & Automobile solutions provider, dedicated to sustainable innovation and superior engineering. Private Limited company registered under Indian Companies Act.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About Company</a>
+            <a href="#contact">Support / Contact</a>
+            <a href="#privacy">Privacy & Legal</a>
+        </div>
+        <div class="footer-col">
+            <h4>Reach Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> NO. 3/88 MOUNT POONAMALLEE ROAD, Ramapuram, Chennai 600089</p>
+            <p><i class="fas fa-phone"></i> 8056040226</p>
+            <p><i class="fas fa-envelope"></i> powertransmobility@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Business Hours</h4>
+            <p>Mon-Fri: 9:00 AM - 7:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+            <p><i class="fas fa-certificate"></i> ISO & BIS Certified</p>
+        </div>
+    </div>
+    <div class="container copyright">
+        &copy; 2026 POWERTRANS MOBILITY LIMITED (PRIVATE LIMITED) | All rights reserved. Designed for EV innovation | Last update April 2026
+    </div>
+</footer>
+
+<!-- simple form alert demo -->
+<script>
+    document.getElementById('demoContact')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for contacting Powertrans Mobility Limited. Our EV expert will reach you shortly.');
+        this.reset();
+    });
+    // smooth anchor scroll
+    document.querySelectorAll('.nav-links a, .btn-outline[href="#contact"], .btn-solid[href="#contact"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
